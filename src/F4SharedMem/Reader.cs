@@ -53,6 +53,14 @@ namespace F4SharedMem
             }
         }
 
+        public bool IsConnected
+        {
+            get
+            {
+                return _lpPrimarySharedMemoryAreaBaseAddress != IntPtr.Zero;
+            }
+        }
+
         public void Dispose()
         {
             Dispose(true);
